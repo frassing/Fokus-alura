@@ -4,7 +4,7 @@
     --azul-royal: #144480;
     --fundo-card-timer: rgba(20, 68, 128, 0.30);
     --lilas: #B872FF;
-    --linear-botes: linear-gradient(180deg, #B872FF 0%, #144480 100%);
+    --linear-botoes: linear-gradient(180deg, #B872FF 0%, #144480 100%);
 }
 
 [data-contexto="foco"] {
@@ -134,13 +134,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
-.app__card-primary-button-wrapper {
+.app__card-control-buttons-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1.6rem;
 }
 
-.app__card-primary-button {
+.app__card-control-button {
     padding: 0.8rem;
     width: 12rem;
     color: var(--color-secondary);
@@ -148,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     outline: inherit;
     border-radius: 3.2rem;
-    background: var(--linear-botes);
+    background: var(--linear-botoes);
     margin-top: 3.2rem;
     font-size: 1.8rem;
     display: flex;
