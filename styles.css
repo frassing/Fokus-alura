@@ -3,7 +3,7 @@
     --color-secondary: #FFF;
     --azul-royal: #144480;
     --fundo-card-timer: rgba(20, 68, 128, 0.30);
-    --lils: #B872FF;
+    --lilas: #B872FF;
     --linear-botes: linear-gradient(180deg, #B872FF 0%, #144480 100%);
 }
 
@@ -117,7 +117,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .app__card-timer {
     color: var(--color-secondary);
-    text-align: center;
     font-family: Unbounded;
     font-size: 12rem;
     font-style: normal;
@@ -215,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .toggle-checkbox:checked + .toggle-switch {
-    background: var(--lils);
+    background: var(--lilas);
 }
 
 .toggle-checkbox:checked + .toggle-switch:before {
@@ -237,6 +236,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Para Celulares */
+@media (max-width: 370px) {
+    .app__card-list {
+        flex-wrap: wrap;
+        row-gap: 0;
+    } 
+}
+
 @media (max-width: 767px) {
     .app__section-banner-container {
         width: 32rem;
@@ -248,5 +254,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .app__card-timer {
         font-size: 6rem;
+        margin: 3.2rem 0;
     }
 }
