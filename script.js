@@ -11,11 +11,11 @@ const startPauseBtIcon = document.querySelector('.app__card-primary-button-icon'
 const restartBt = document.getElementById('restart');
 const tempoNaTela = document.getElementById('timer');
 const musicaFocoInput = document.getElementById('alternar-musica');
-const musica = new Audio('/sons/luna-rise-part-one.mp3');
-const audioPlay = new Audio('/sons/play.wav');
-const audioPausar = new Audio('/sons/pause.mp3');
-const audioTempoFinalizado = new Audio('/sons/beep.mp3');
-const audioReiniciar = new Audio('/sons/restart.mp3');
+const musica = new Audio('./sons/luna-rise-part-one.mp3');
+const audioPlay = new Audio('./sons/play.wav');
+const audioPausar = new Audio('./sons/pause.mp3');
+const audioTempoFinalizado = new Audio('./sons/beep.mp3');
+const audioReiniciar = new Audio('./sons/restart.mp3');
 
 let tempoDecorridoEmSegundos = 1500;
 let intervaloId = null;
@@ -47,7 +47,7 @@ function alterarContexto (contexto, imagem) {
 			botao.classList.remove('active');
 	})
 	html.setAttribute('data-contexto', contexto);
-	imagemBanner.setAttribute('src', `/imagens/${imagem}`);
+	imagemBanner.setAttribute('src', `./imagens/${imagem}`);
 	definirDuracaoTimer();
 	mostrarTempo();
 	switch (contexto) {
@@ -112,7 +112,7 @@ function iniciarOuPausarTemporizador() {
 	audioPlay.play();
 	intervaloId = setInterval(contagemRegressiva, 1000);
 	startPauseBtLabel.textContent = "Pausar";
-	startPauseBtIcon.setAttribute('src', '/imagens/pause.png');
+	startPauseBtIcon.setAttribute('src', './imagens/pause.png');
 }
 
 function reiniciarTemporizador() {
@@ -125,7 +125,7 @@ function reiniciarTemporizador() {
 function zerarIntervaloId() {
 	clearInterval(intervaloId);
 	startPauseBtLabel.textContent = "Começar";
-	startPauseBtIcon.setAttribute('src', '/imagens/play_arrow.png');
+	startPauseBtIcon.setAttribute('src', './imagens/play_arrow.png');
 	intervaloId = null;
 }
 
